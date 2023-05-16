@@ -1,0 +1,396 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+
+  --body-color: #1e1e20;
+  --grns: #d5ff3f;
+  --reds: #fc5746;
+  --grey: #c4c4c4;
+  --brwn: #eddbc3;
+  --lgrey: #c9c9c9;
+  --llgrey: #636363;
+  --blu: #0d4b81;
+  /* --brwn-txt: #e95555;
+  --blu-txt: #050596; */
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+
+  --title-font-size: 4rem;
+  --subtitle-font-size: 1.5rem;
+  --himg: 7rem;
+  --ribbon-height: 2.5rem;
+
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 630px) {
+  :root {
+    --title-font-size: 6.5rem;
+    --subtitle-font-size: 2rem;
+    --himg: 9rem;
+    --ribbon-height: 3.5rem;
+  }
+}
+@media screen and (min-width: 968px) {
+  :root {
+    /* --title-font-size: .3rem; */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+@font-face {
+  font-family: "dahliabold_condensed";
+  src: url("../fonts/dahlia_bold_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/dahlia_bold_condensed-webfont.woff") format("woff");
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: "dahliamedium_condensed";
+  src: url("../fonts/dahlia_medium_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/dahlia_medium_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "dahliaregular_condensed";
+  src: url("../fonts/dahlia_regular_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/dahlia_regular_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s; /* for light mode animation */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c4e5fc;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1080px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/* ================HERO SECTION============ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grns);
+  position: relative;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 25px 25px 0 0;
+}
+
+.hero__title {
+  /* width: 100%; */
+  color: var(--body-color);
+  font-family: "dahliabold_condensed";
+  font-size: var(--title-font-size);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero__title--up {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.hero__title--up-img {
+  width: var(--himg);
+  height: var(--title-font-size);
+  border-radius: 50px;
+  background-color: var(--blu);
+  padding: 0 2rem;
+}
+
+.hero__subtitle {
+  font-family: "dahliamedium_condensed";
+  font-size: var(--subtitle-font-size);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.talk__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--body-color);
+  color: var(--grns);
+  border-radius: 25px;
+  /* font-size: 1.5rem; */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.talk__button i {
+  margin-left: 1rem;
+  transform: rotate(-45deg);
+}
+
+.hero__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--title-font-size);
+  border-radius: 25px;
+  position: relative;
+  bottom: -50px;
+  z-index: 1;
+  border-radius: 0 0 50px 50px;
+}
+
+.hero__image img {
+  width: 190%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px 50px 0 0;
+}
+
+.ribb {
+  z-index: 100;
+  bottom: 20px;
+  height: 11rem;
+  overflow: hidden;
+  border-radius: 0;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ribbon {
+  background-color: var(--grns);
+  width: 150%;
+  font-family: "dahliabold_condensed";
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: var(--llgrey);
+  border: 0.5px solid var(--body-color);
+}
+
+.ribbon__f {
+  transform: rotate(5deg);
+}
+
+.ribbon__s {
+  transform: rotate(-5deg);
+  position: absolute;
+}
+
+/* ================services================== */
+.services {
+  margin-top: 3rem;
+}
+
+.services__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--llgrey);
+}
+
+.services__title {
+  font-family: "dahliabold_condensed";
+  font-size: var(--title-font-size);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--lgrey);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services__subtitle {
+  max-width: 500px;
+  font-family: "dahliaregular_condensed";
+  font-size: var(--subtitle-font-size);
+  text-align: center;
+  color: var(--lgrey);
+  padding-bottom: 2rem;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  font-family: "dahliamedium_condensed";
+  font-size: var(--title-font-size);
+  color: var(--llgrey);
+}
+
+.services__image {
+  display: none;
+}
+
+.services__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--llgrey);
+}
+
+.services__icon i {
+  font-size: var(--title-font-size);
+  transform: rotate(-45deg);
+  color: var(--grns);
+}
+
+@media screen and (min-width: 630px) {
+  .hero__image {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .hero__subtitle {
+    width: 35%;
+  }
+
+  .services__head {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 0;
+  }
+
+  .services__subtitle {
+    text-align: right;
+  }
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--body-color);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--grns);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e8ffa5;
+}
