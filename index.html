@@ -13,7 +13,7 @@
 
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"> -->
 
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
@@ -22,38 +22,119 @@
 </head>
 
 <body>
+    <!-- NAVMENU -->
 
-    <!-- logo -->
-    <!-- <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__menu">
-                <div class="nav__logo">
-                    <a href="http://"><img src="./assets/images/pb.png" alt="logo"></a>
+
+    <div class="menu">
+        <div onclick="togglec()" class="hnav__btn">
+            <div class="hnav__btn-outline nav__btn-outline-1"></div>
+            <div class="hnav__btn-outline nav__btn-outline-2"></div>
+
+            <div class="nav__hamburger active" id="hamburger">
+                <span></span>
+            </div>
+        </div>
+        <div class="primary-menu">
+            <div class="menu-container">
+                <div class="wrapper">
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><span>I</span>Home</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><span>II</span>News</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><span>III</span>Blog</a>
+                    </div>
                 </div>
-
-                <div class="nav__list">
-                    <a href="http://"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="secondary-menu">
+            <div class="menu-container">
+                <div class="wrapper">
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Speaker</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Blog</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Contact</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Credits</a>
+                    </div>
                 </div>
 
             </div>
-        </nav>
+        </div>
+    </div>
 
+
+
+    <header class="header">
+
+        <!-- <div class="nav container">
+            <div class="nav__logolong">
+                <img src="./assets/images/logos/logolong.png" alt="">
+            </div>
+
+            <div class="nav__logo">
+                <img src="./assets/images/logos/logo.png" alt="">
+            </div>
+
+            <div class="nav__btn" id="toggle-btn">
+                <div class="nav__btn-outline nav__btn-outline-1"></div>
+                <div class="nav__btn-outline nav__btn-outline-2"></div>
+
+                <div class="nav__hamburger" id="hamburger">
+                    <span></span>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <!-- <header class="header">
+        <div class="nav">
+            <div class="nav__btn" id="toggle-btn">
+                <div class="nav__btn-outline nav__btn-outline-1"></div>
+                <div class="nav__btn-outline nav__btn-outline-2"></div>
+
+                <div class="nav__hamburger" id="hamburger">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="nav__overlay">
+                <svg viewbox="0 0 1000 1000">
+                    <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+                </svg>
+            </div>
+
+            
+        </div>
     </header> -->
 
-    <!-- MAIN -->
+
     <section class="hero">
-        <!-- <nav class="nav container">
-            <div class="nav__menu">
-                <div class="nav__logo">
-                    <a href="http://"><img src="./assets/images/pb.png" alt="logo"></a>
-                </div>
-
-                <div class="nav__list">
-                    <a href="http://"><i class="fa-solid fa-bars"></i></a>
-                </div>
-
+        <div class="nav container">
+            <div class="nav__logo">
+                <img src="./assets/images/logos/logo.png" alt="">
             </div>
-        </nav> -->
+
+
+            <div onclick="togglehm()" class="nav__btn" id="toggle-btn">
+                <div class="nav__btn-outline nav__btn-outline-1"></div>
+                <div class="nav__btn-outline nav__btn-outline-2"></div>
+
+                <div class="nav__hamburger" id="hamburger">
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+
+
+
         <div class="hero__container container">
             <div class="hero__title">
                 <div class="hero__title--up">
@@ -179,31 +260,6 @@
         </div>
     </section>
 
-    <!-- TESTMONIAL_KINDA -->
-    <!-- <section class="testm container">
-        <div class="testm__container">
-            <div class="testm__item testm__title">
-                <h2 class="testm__title-txt">
-                    Happy Clients
-                </h2>
-            </div>
-            <div class="testm__item testm__subtitle">
-                <p class="testm__subtitle-txt">
-                    We have worked with some of the biggest brands in the world- and we have loved every minute of it.
-                    Our clients are our partners, and we work with them to achieve their goals.
-                </p>
-            </div>
-            <div class="testm__item testm__clno">
-                <div class="testm__icon">
-                    <img src="./assets/images/success.png" alt="">
-                </div>
-                <div class="testm__clno-txt">
-                    <h2>17</h2>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- VIDEO CONTAINER -->
     <section class="video container">
         <div class="video__container">
@@ -212,8 +268,6 @@
                 <p class="video__item-title-sub"> Our various works through the years of our operation</p>
             </div>
             <div class="video__item-video">
-                <!-- <iframe src="https://media.pixelpunks.gg/vids/intro.mp4" frameborder="0" allow=" autoplay; loop;"
-                    allowfullscreen></iframe> -->
                 <video src="https://media.pixelpunks.gg/vids/intro.mp4" autoplay loop muted></video>
                 <div class="video__item-video-play">
                     <a href="https://media.pixelpunks.gg/vids/intro.mp4"><i
@@ -276,8 +330,12 @@
 
     </section>
     <!--=============== SWIPER JS ===============-->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- <script src="./assets/js/swiper-bundle.min.js"></script> -->
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
