@@ -4,6 +4,7 @@
 
   /*========== Colors ==========*/
   /* #d5ff3f; */
+  /* #1e1e20; */
   --body-color: #10071e;
   --grns: #3adafd;
   --reds: #fc5746;
@@ -22,25 +23,7 @@
   --subtitle-font-size: 1.5rem;
   --himg: 7rem;
   --ribbon-height: 2.5rem;
-
   --body-font: "Poppins", sans-serif;
-  --biggest-font-size: 1.75rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
-  --tiny-font-size: 0.625rem;
-
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semibold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000;
 }
 
 /* Responsive typography */
@@ -52,39 +35,33 @@
     --ribbon-height: 3.5rem;
   }
 }
-@media screen and (min-width: 968px) {
-  :root {
-    /* --title-font-size: .3rem; */
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
-  }
-}
 
 @font-face {
   font-family: "dahliabold_condensed";
-  src: url("../fonts/dahlia_bold_condensed-webfont.woff2") format("woff2"),
-    url("../fonts/dahlia_bold_condensed-webfont.woff") format("woff");
+  src: url("https://media.pixelpunks.gg/fonts/dahlia_bold_condensed-webfont.woff2")
+      format("woff2"),
+    url("https://media.pixelpunks.gg/fonts/dahlia_bold_condensed-webfont.woff")
+      format("woff");
   /* font-weight: normal;
   font-style: normal; */
 }
 
 @font-face {
   font-family: "dahliamedium_condensed";
-  src: url("../fonts/dahlia_medium_condensed-webfont.woff2") format("woff2"),
-    url("../fonts/dahlia_medium_condensed-webfont.woff") format("woff");
+  src: url("https://media.pixelpunks.gg/fonts/dahlia_medium_condensed-webfont.woff2")
+      format("woff2"),
+    url("https://media.pixelpunks.gg/fonts/dahlia_medium_condensed-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "dahliaregular_condensed";
-  src: url("../fonts/dahlia_regular_condensed-webfont.woff2") format("woff2"),
-    url("../fonts/dahlia_regular_condensed-webfont.woff") format("woff");
+  src: url("https://media.pixelpunks.gg/fonts/dahlia_regular_condensed-webfont.woff2")
+      format("woff2"),
+    url("https://media.pixelpunks.gg/fonts/dahlia_regular_condensed-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -154,6 +131,89 @@ img {
   overflow: hidden;
 }
 
+/* ==================PRELOADER================= */
+.preloader {
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1300;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader__img {
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle {
+  position: absolute;
+}
+
+.preloader svg {
+  width: 250px;
+  height: 250px;
+}
+
+.preloader svg .ripple {
+  fill: transparent;
+  stroke: var(--grns);
+  stroke-width: 3px;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: 2s ease-out 0s infinite ripple-out;
+  animation: 2s ease-out 0s infinite ripple-out;
+}
+
+.preloader svg .ripple2 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.preloader svg .ripple3 {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+@-webkit-keyframes ripple-out {
+  0% {
+    r: 0px;
+    opacity: 1;
+  }
+  100% {
+    r: 80px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-out {
+  0% {
+    r: 0px;
+    opacity: 1;
+  }
+  100% {
+    r: 80px;
+    opacity: 0;
+  }
+}
+
 /* ================NAV SECTION============ */
 .nav {
   position: relative;
@@ -162,7 +222,6 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
   border-radius: 0;
   margin-bottom: 5rem;
 }
@@ -305,7 +364,6 @@ img {
   justify-content: space-between;
   z-index: 100;
   transform: translateY(-100%);
-  /* position: relative; */
 }
 
 .menu a {
@@ -389,7 +447,6 @@ img {
 }
 
 .hero__title {
-  /* width: 100%; */
   color: var(--body-color);
   font-family: "dahliabold_condensed";
   font-size: var(--title-font-size);
@@ -398,7 +455,6 @@ img {
 }
 
 .hero__title--up {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -431,7 +487,6 @@ img {
   background-color: var(--body-color);
   color: var(--grns);
   border-radius: 25px;
-  /* font-size: 1.5rem; */
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -585,7 +640,6 @@ img {
   padding: 2rem;
   background-color: var(--body-color);
   border: 0.1px solid var(--llgrey);
-  /* grid-row: 1 / 3; */
 }
 
 .work__item-title-head {
@@ -628,109 +682,6 @@ img {
 }
 
 .work__item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===================testm=============== */
-
-.testm {
-  margin-top: 5rem;
-}
-
-.testm__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 0;
-  font-family: "dahliamedium_condensed";
-  color: var(--llgrey);
-}
-
-.testm__title {
-  font-family: "dahliabold_condensed";
-  font-size: var(--title-font-size);
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--lgrey);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.testm__subtitle {
-  max-width: 500px;
-  font-family: "dahliaregular_condensed";
-  font-size: var(--subtitle-font-size);
-  text-align: center;
-  color: var(--lgrey);
-  padding-bottom: 2rem;
-}
-
-.testm__clno {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--grns);
-  border-radius: 75px;
-  margin-bottom: 1rem;
-}
-
-.testm__icon {
-  /* width: 100px;
-  height: 100px; */
-  /* border-radius: 50px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-}
-
-.testm__icon img {
-  width: 100px;
-  /* height: 100px; */
-  /* border-radius: 50px; */
-}
-
-.testm__clno-txt {
-  font-size: var(--title-font-size);
-  padding-top: 1rem;
-  color: var(--llgrey);
-}
-
-/* =====================clients-carasoul================ */
-.clients__crs {
-  /* margin-top: 5rem; */
-  padding: 2rem 1rem;
-}
-
-.clients-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-evenly;
-  gap: 2rem;
-  padding-bottom: 2rem;
-  /* border-top: 1px solid var(--llgrey); */
-  border-bottom: 0.1px solid var(--llgrey);
-}
-
-.clients__logo {
-  width: 70px;
-  justify-self: center;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.clients__logo img {
-  filter: grayscale(97%);
-  opacity: 0.5;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1010,9 +961,7 @@ img {
 
 .footer__socials i {
   font-size: 1.5rem;
-  /* color: var(--body-color); */
   color: var(--grns);
-  /* background-color: var(--grns); */
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 1rem;
@@ -1123,46 +1072,6 @@ img {
   .work__item-4 {
     grid-column: 3 / 4;
     grid-row: 3 / 6;
-  }
-
-  .testm__container {
-    /* flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 0.1px solid var(--llgrey);
-    border-bottom: 0.1px solid var(--llgrey);
-  }
-
-  .testm__title {
-    font-size: 4rem;
-    margin-bottom: 0;
-  }
-
-  .testm__subtitle {
-    text-align: right;
-    padding-top: 2rem;
-  }
-
-  .testm__clno {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .testm__icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .testm__icon img {
-    width: 150px;
-    height: auto;
   }
 
   /* newsletter */

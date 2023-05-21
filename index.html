@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Preloading Fonts -->
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_bold_condensed-webfont.woff" as="font"
+        type="font/woff" crossorigin>
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_bold_condensed-webfont.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_medium_condensed-webfont.woff" as="font"
+        type="font/woff" crossorigin>
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_medium_condensed-webfont.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_regular_condensed-webfont.woff" as="font"
+        type="font/woff" crossorigin>
+    <link rel="preload" href="https://media.pixelpunks.gg/fonts/dahlia_regular_condensed-webfont.woff2" as="font"
+        type="font/woff2" crossorigin>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -23,8 +37,6 @@
 
 <body>
     <!-- NAVMENU -->
-
-
     <div class="menu">
         <div onclick="togglec()" class="hnav__btn">
             <div class="hnav__btn-outline nav__btn-outline-1"></div>
@@ -71,50 +83,6 @@
     </div>
 
 
-
-    <header class="header">
-
-        <!-- <div class="nav container">
-            <div class="nav__logolong">
-                <img src="./assets/images/logos/logolong.png" alt="">
-            </div>
-
-            <div class="nav__logo">
-                <img src="./assets/images/logos/logo.png" alt="">
-            </div>
-
-            <div class="nav__btn" id="toggle-btn">
-                <div class="nav__btn-outline nav__btn-outline-1"></div>
-                <div class="nav__btn-outline nav__btn-outline-2"></div>
-
-                <div class="nav__hamburger" id="hamburger">
-                    <span></span>
-                </div>
-            </div>
-        </div> -->
-    </header>
-    <!-- <header class="header">
-        <div class="nav">
-            <div class="nav__btn" id="toggle-btn">
-                <div class="nav__btn-outline nav__btn-outline-1"></div>
-                <div class="nav__btn-outline nav__btn-outline-2"></div>
-
-                <div class="nav__hamburger" id="hamburger">
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="nav__overlay">
-                <svg viewbox="0 0 1000 1000">
-                    <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
-                </svg>
-            </div>
-
-            
-        </div>
-    </header> -->
-
-
     <section class="hero">
         <div class="nav container">
             <div class="nav__logo">
@@ -149,7 +117,7 @@
 
             </div>
             <div class="hero__subtitle">
-                <p> We are a team of talented managers, designers, developers etc making your vision come to life.</p>
+                <p> We are a team of talented managers and analysts connecting you to your favorite brands.</p>
                 <div class="talk__button">Lets Talk <i class="fa-solid fa-arrow-right talk__button-icon"></i> </div>
             </div>
 
@@ -166,13 +134,13 @@
 
     <section class="ribb container">
         <div class="ribbon ribbon__f">
-            <marquee behavior="alternate" direction="left">SEO. Market Reasearch. Branding. CRO. Gaming. Influncer
-                Market. Content Mangement. Content Creation.
+            <marquee behavior="alternate" direction="left">Attention Marketing. Content Creation. Content Mangement.
+                Branding. Influencer Marketing.
             </marquee>
         </div>
         <div class="ribbon ribbon__s">
-            <marquee behavior="alternate" direction="right">SEO. Market Reasearch. Branding. CRO. Gaming. Influncer
-                Market. Content Mangement. Content Creation.
+            <marquee behavior="alternate" direction="right">Attention Marketing. Content Creation. Content Mangement.
+                Branding. Influencer Marketing.
             </marquee>
         </div>
     </section>
@@ -182,13 +150,14 @@
 
         <div class="services__head">
             <div class="services__title">Our Services</div>
-            <div class="services__subtitle">Every one of us loves something different. So, explore the world
-                through the lens of our visual capabilities, and find what you love</div>
+            <div class="services__subtitle">Pixel Punks is the attention marketing agency where the ambitious belong.
+                Elevate your game with access to the best, brightest and most exciting brands, influencers and
+                professional esports players.</div>
         </div>
 
         <div class="services__container">
             <div class="services__item">
-                <p class="services__name">SEO</p>
+                <p class="services__name">Brand Marketing</p>
                 <a href="http://">
                     <div class="services__image">
                         <img src="./assets/images/seo.png" alt="">
@@ -206,7 +175,7 @@
                 </a>
             </div>
             <div class="services__item">
-                <p class="services__name">CRO</p>
+                <p class="services__name">Influencer Marketing</p>
                 <a href="http://">
                     <div class="services__image">
                         <img src="./assets/images/seo.png" alt="">
@@ -225,7 +194,7 @@
                 </a>
             </div>
             <div class="services__item">
-                <p class="services__name">Gaming</p>
+                <p class="services__name">Content Creation</p>
                 <a href="http://">
                     <div class="services__image">
                         <img src="./assets/images/seo.png" alt="">
@@ -264,13 +233,15 @@
     <section class="video container">
         <div class="video__container">
             <div class="video__item-title">
-                <h2 class="video__item-title-head">Our Culture</h2>
-                <p class="video__item-title-sub"> Our various works through the years of our operation</p>
+                <h2 class="video__item-title-head">Why Us?</h2>
+                <p class="video__item-title-sub">Pixel Punks and Gaming are a match made in heaven!</p>
             </div>
             <div class="video__item-video">
+                <!-- <iframe src="https://media.pixelpunks.gg/vids/intro.mp4" frameborder="0" allow=" autoplay; loop;"
+                    allowfullscreen></iframe> -->
                 <video src="https://media.pixelpunks.gg/vids/intro.mp4" autoplay loop muted></video>
                 <div class="video__item-video-play">
-                    <a href="https://media.pixelpunks.gg/vids/intro.mp4"><i
+                    <a href="https://media.pixelpunks.gg/vids/intro.webm"><i
                             class="fa-solid fa-arrow-right subscribe-icon"></i></a>
                 </div>
             </div>
@@ -299,10 +270,20 @@
 
     <!-- CONTACT US  -->
     <section class="contact container">
-        <div class="contact__title">Let's discuss <br> your ideas</div>
+        <div class="contact__title">Ready to <br> collab?</div>
         <div class="contact__talk"> <a href="http://">Let's Talk</a> </div>
     </section>
 
+    <!--=============== Preloader ===============-->
+    <div class="preloader">
+        <div class="loader__img">
+            <img src="./assets/images/logos/logoblock.png" alt="">
+        </div>
+        <svg class="circle" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <circle class="ripple" cx="80" cy="80" r="20"></circle>
+            <circle class="ripple ripple2" cx="80" cy="80" r="40"></circle>
+        </svg>
+    </div>
     <!-- FOOTER -->
     <section class="container footer">
         <div class="footer__logo">
@@ -320,7 +301,7 @@
                 <a href="http://">Terms of Service</a>
             </div>
             <div class="footer__copy">
-                <p>© 2021 Pixel Punks. All rights reserved.</p>
+                <p>© 2023 Pixel Punks. All rights reserved.</p>
             </div>
             <div class="footer__privacy">
                 <a href="http://">Privacy Policy</a>
